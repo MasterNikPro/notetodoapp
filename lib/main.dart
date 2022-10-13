@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hive/hive.dart';
 import 'package:notetodoapp/screens/main_screeen.dart';
 import 'package:notetodoapp/screens/provider/main_screen_model.dart';
 import 'package:provider/provider.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 
-void main() {
+void main() async{
+  await Hive.initFlutter();
   runApp(
     MultiProvider(
       providers: [ChangeNotifierProvider(
