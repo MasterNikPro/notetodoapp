@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:notetodoapp/screens/main_screeen.dart';
+import 'package:notetodoapp/screens/provider/main_screen_model.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(AppMain());
+  runApp(
+    MultiProvider(
+      providers: [ChangeNotifierProvider(
+        create: (_) => MainScreenModel(),
+      )],
+      child: const AppMain(),
+    ),
+  );
 }
 
 class AppMain extends StatelessWidget {

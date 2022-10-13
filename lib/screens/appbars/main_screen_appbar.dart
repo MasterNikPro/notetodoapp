@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:notetodoapp/assets/colors.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-AppBar MainScreenAppBar() {
+AppBar mainScreenAppBar() {
   return AppBar(
     backgroundColor: darkBlue,
     elevation: 0,
@@ -14,7 +14,7 @@ AppBar MainScreenAppBar() {
         )),
     actions: [
       Container(
-        padding: EdgeInsets.only(top:10,bottom: 10,right: 50),
+        padding: const EdgeInsets.only(top:10,bottom: 10,right: 50),
         child: ToggleSwitch(
           minWidth: 100,
           cornerRadius: 25,
