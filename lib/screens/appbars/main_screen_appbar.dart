@@ -1,8 +1,10 @@
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:notetodoapp/assets/colors.dart';
+import 'package:notetodoapp/screens/provider/main_screen_model.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
-AppBar mainScreenAppBar() {
+AppBar mainScreenAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: darkBlue,
     elevation: 0,
@@ -14,7 +16,7 @@ AppBar mainScreenAppBar() {
         )),
     actions: [
       Container(
-        padding: const EdgeInsets.only(top:10,bottom: 10,right: 50),
+        padding: const EdgeInsets.only(top: 10, bottom: 10, right: 50),
         child: ToggleSwitch(
           minWidth: 100,
           cornerRadius: 25,
@@ -22,16 +24,20 @@ AppBar mainScreenAppBar() {
             [darkMarine],
             [lightMarine]
           ],
-          // customTextStyles: [],
-          //customHeights: [25,25],
+          onToggle: (index)  {
+           // print("posted" + index.toString());
+            context.read<MainScreenModel>().changeType(index!);
+          },
           initialLabelIndex: 0,
           totalSwitches: 2,
           labels: const ['Notes', 'ToDo'],
-          customTextStyles: const [
+          customTextStyles: [
             TextStyle(
-                color: Colors.brown, fontSize: 18.0, fontWeight: FontWeight.w900),
+                color: lightMarine,
+                fontSize: 18.0,
+                fontWeight: FontWeight.w800),
             TextStyle(
-                color: Colors.black, fontSize: 16.0, fontStyle: FontStyle.italic)
+                color: darkMarine, fontSize: 16.0, fontWeight: FontWeight.w800)
           ],
         ),
       ),
