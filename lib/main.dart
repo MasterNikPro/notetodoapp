@@ -5,6 +5,7 @@ import 'package:notetodoapp/hive/hive_todo_class.dart';
 import 'package:notetodoapp/screens/main_screeen.dart';
 import 'package:notetodoapp/screens/provider/main_screen_model.dart';
 import 'package:notetodoapp/screens/provider/note_screen_model.dart';
+import 'package:notetodoapp/screens/provider/todo_page_model.dart';
 import 'package:notetodoapp/screens/provider/todo_screen_model.dart';
 import 'package:provider/provider.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -17,11 +18,12 @@ void main() async {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(
+        ChangeNotifierProvider<MainScreenModel>(
           create: (_) => MainScreenModel(),
         ),
-        ChangeNotifierProvider(create: (_)=>NoteScreenModel()),
-        ChangeNotifierProvider(create: (_)=>TodoScreenModel()),
+        ChangeNotifierProvider<NoteScreenModel>(create: (_)=>NoteScreenModel()),
+        ChangeNotifierProvider<TodoScreenModel>(create: (_)=>TodoScreenModel()),
+        ChangeNotifierProvider<TodoPageModel>(create: (_)=>TodoPageModel()),
       ],
       child: const AppMain(),
     ),

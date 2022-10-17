@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:notetodoapp/assets/colors.dart';
+import 'package:notetodoapp/hive/hive_todo_class.dart';
 import 'package:notetodoapp/screens/appbars/main_screen_appbar.dart';
 import 'package:notetodoapp/screens/provider/main_screen_model.dart';
 import 'package:notetodoapp/screens/provider/note_screen_model.dart';
@@ -55,6 +56,8 @@ class _MainScreenState extends State<MainScreen> {
           },
         ),
         floatingActionButton: FloatingActionButton(
+          backgroundColor: lightBlue,
+          child: Icon(Icons.add,color: darkBlue,),
           onPressed: () {},
         ));
   }
