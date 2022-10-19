@@ -6,4 +6,5 @@ class MainScreenModel with ChangeNotifier {
     _position = index;
     notifyListeners();
   }
+
 }
