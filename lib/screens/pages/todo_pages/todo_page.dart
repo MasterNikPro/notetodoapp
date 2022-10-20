@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../assets/colors.dart';
-import '../../hive/hive_register.dart';
+import '../../../assets/colors.dart';
+import '../../../hive/hive_register.dart';
 
 class TodoPage extends StatefulWidget {
   const TodoPage({Key? key}) : super(key: key);

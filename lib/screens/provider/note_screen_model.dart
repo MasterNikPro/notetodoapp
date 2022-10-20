@@ -6,7 +6,7 @@ class NoteScreenModel with ChangeNotifier {
     notifyListeners();
   }
   void back(BuildContext context){
-    Navigator.pop(context);
+    Navigator.pushReplacementNamed(context,'/');
     notifyListeners();
   }
 

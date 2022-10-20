@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notetodoapp/assets/colors.dart';
 import 'package:notetodoapp/screens/appbars/main_screen_appbar.dart';
-import 'package:notetodoapp/screens/pages/note_page.dart';
-import 'package:notetodoapp/screens/pages/todo_page.dart';
+import 'package:notetodoapp/screens/pages/note_pages/note_page.dart';
+import 'package:notetodoapp/screens/pages/todo_pages/todo_page.dart';
 import 'package:notetodoapp/screens/provider/main_screen_model.dart';
 import 'package:notetodoapp/screens/provider/note_screen_model.dart';
 import 'package:notetodoapp/screens/provider/todo_screen_model.dart';

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notetodoapp/hive/hive_register.dart';
 import 'package:notetodoapp/screens/main_screeen.dart';
-import 'package:notetodoapp/screens/pages/note_add_page.dart';
+import 'package:notetodoapp/screens/pages/note_pages/note_add_page.dart';
+import 'package:notetodoapp/screens/pages/note_pages/note_edit_page.dart';
 import 'package:notetodoapp/screens/provider/main_screen_model.dart';
 import 'package:notetodoapp/screens/provider/note_screen_model.dart';
 import 'package:notetodoapp/screens/provider/todo_page_model.dart';
@@ -40,6 +41,7 @@ class AppMain extends StatelessWidget {
       routes: {
         '/': (context) => const MainScreen(),
         '/note_add_page':(context)=> NoteAddPage(),
+        '/note_edit_page':(context)=> NoteEditPage(),
       },
     );
   }
