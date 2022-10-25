@@ -7,7 +7,7 @@ import 'package:toggle_switch/toggle_switch.dart';
 AppBar mainScreenAppBar(BuildContext context) {
   return AppBar(
     backgroundColor: darkBlue,
-    elevation: 0,
+    //elevation: 0,
     leading: IconButton(
         onPressed: () {},
         icon: Icon(

@@ -24,6 +24,7 @@ void main() async {
         ChangeNotifierProvider<TodoScreenModel>(
             create: (_) => TodoScreenModel()),
         ChangeNotifierProvider<TodoPageModel>(create: (_) => TodoPageModel()),
+        ChangeNotifierProvider<TodoAddModel>(create: (_)=>)
       ],
       child: const AppMain(),
     ),
@@ -42,6 +43,7 @@ class AppMain extends StatelessWidget {
         '/': (context) => const MainScreen(),
         '/note_add_page':(context)=> NoteAddPage(),
         '/note_edit_page':(context)=> NoteEditPage(),
+        '/todo_add_page':(context)=>
       },
     );
   }

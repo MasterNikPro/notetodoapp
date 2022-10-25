@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notetodoapp/screens/pages/note_pages/note_edit_page.dart';
 import 'package:notetodoapp/screens/provider/note_screen_model.dart';
+import 'package:notetodoapp/screens/provider/todo_screen_model.dart';
 
 import '../../hive/hive_note_class.dart';
 import '../../hive/hive_register.dart';
@@ -23,14 +24,30 @@ class MainScreenModel with ChangeNotifier {
         }
     Navigator.pushReplacementNamed(context, '/');
 }
-void delete(int index){
-    noteBox.deleteAt(index);
-    NoteScreenModel().delete();
+void delete(int index,int type){
+    if(type==1)
+    {
+      noteBox.deleteAt(index);
+      NoteScreenModel().delete();
+    }
+    if(type==2)
+      {
+        todoBox.deleteAt(index);
+        TodoScreenModel().delete();
+      }
+
   notifyListeners();
 }
-void edit(BuildContext context,int index){
-    this._index=index;
-    Navigator.pushReplacementNamed(context,'/note_edit_page');
+void edit(BuildContext context,int index,int type){
+    if(type==1)
+      {
+        _index=index;
+        Navigator.pushReplacementNamed(context,'/note_edit_page');
+      }else{
+      _index=index;
+      Navigator.pushReplacementNamed(context,'/note_edit_page');
+    }
+
 
 }
 

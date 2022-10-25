@@ -23,10 +23,11 @@ class _NotePageState extends State<NotePage> {
           return Dismissible(
             key: ValueKey<int>(noteBox.length),
             onDismissed: (DismissDirection direction) {
-              MainScreenModel().delete(index);
+              MainScreenModel().delete(index,1);
             },
             child: Container(
-              margin: const EdgeInsets.all(5),
+
+              margin: const EdgeInsets.only(top: 10,right: 5,left: 5,bottom: 0),
               //padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                 border: Border.all(
@@ -39,7 +40,7 @@ class _NotePageState extends State<NotePage> {
               //color: darkMarine,
               child: ListTile(
                 onTap: (){
-                  MainScreenModel().edit(context,index);
+                  MainScreenModel().edit(context,index,1);
                 },
                 title: Text(
                   temp.title,
